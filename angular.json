@@ -52,7 +52,7 @@
       },
       "root": "projects/grid-demo",
       "sourceRoot": "projects/grid-demo/src",
-      "prefix": "app",
+      "prefix": "asw",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

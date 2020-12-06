@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-grid',
+  selector: 'lib-table',
   template: `
     <p>
-      grid works!
+      table works!
     </p>
   `,
   styles: [
   ]
 })
-export class GridComponent implements OnInit {
+export class tableComponent implements OnInit {
 
   constructor() { }
 

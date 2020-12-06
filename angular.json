@@ -3,38 +3,38 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "grid": {
+    "table": {
       "projectType": "library",
-      "root": "projects/grid",
-      "sourceRoot": "projects/grid/src",
+      "root": "projects/table",
+      "sourceRoot": "projects/table/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/grid/tsconfig.lib.json",
-            "project": "projects/grid/ng-package.json"
+            "tsConfig": "projects/table/tsconfig.lib.json",
+            "project": "projects/table/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/grid/tsconfig.lib.prod.json"
+              "tsConfig": "projects/table/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/grid/src/test.ts",
-            "tsConfig": "projects/grid/tsconfig.spec.json",
-            "karmaConfig": "projects/grid/karma.conf.js"
+            "main": "projects/table/src/test.ts",
+            "tsConfig": "projects/table/tsconfig.spec.json",
+            "karmaConfig": "projects/table/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/grid/tsconfig.lib.json",
-              "projects/grid/tsconfig.spec.json"
+              "projects/table/tsconfig.lib.json",
+              "projects/table/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -43,32 +43,32 @@
         }
       }
     },
-    "grid-demo": {
+    "table-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/grid-demo",
-      "sourceRoot": "projects/grid-demo/src",
+      "root": "projects/table-demo",
+      "sourceRoot": "projects/table-demo/src",
       "prefix": "asw",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/grid-demo",
-            "index": "projects/grid-demo/src/index.html",
-            "main": "projects/grid-demo/src/main.ts",
-            "polyfills": "projects/grid-demo/src/polyfills.ts",
-            "tsConfig": "projects/grid-demo/tsconfig.app.json",
+            "outputPath": "dist/table-demo",
+            "index": "projects/table-demo/src/index.html",
+            "main": "projects/table-demo/src/main.ts",
+            "polyfills": "projects/table-demo/src/polyfills.ts",
+            "tsConfig": "projects/table-demo/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "projects/grid-demo/src/favicon.ico",
-              "projects/grid-demo/src/assets"
+              "projects/table-demo/src/favicon.ico",
+              "projects/table-demo/src/assets"
             ],
             "styles": [
-              "projects/grid-demo/src/styles.scss"
+              "projects/table-demo/src/styles.scss"
             ],
             "scripts": []
           },
@@ -76,8 +76,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/grid-demo/src/environments/environment.ts",
-                  "with": "projects/grid-demo/src/environments/environment.prod.ts"
+                  "replace": "projects/table-demo/src/environments/environment.ts",
+                  "with": "projects/table-demo/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -105,33 +105,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "grid-demo:build"
+            "browserTarget": "table-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "grid-demo:build:production"
+              "browserTarget": "table-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "grid-demo:build"
+            "browserTarget": "table-demo:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/grid-demo/src/test.ts",
-            "polyfills": "projects/grid-demo/src/polyfills.ts",
-            "tsConfig": "projects/grid-demo/tsconfig.spec.json",
-            "karmaConfig": "projects/grid-demo/karma.conf.js",
+            "main": "projects/table-demo/src/test.ts",
+            "polyfills": "projects/table-demo/src/polyfills.ts",
+            "tsConfig": "projects/table-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/table-demo/karma.conf.js",
             "assets": [
-              "projects/grid-demo/src/favicon.ico",
-              "projects/grid-demo/src/assets"
+              "projects/table-demo/src/favicon.ico",
+              "projects/table-demo/src/assets"
             ],
             "styles": [
-              "projects/grid-demo/src/styles.scss"
+              "projects/table-demo/src/styles.scss"
             ],
             "scripts": []
           }
@@ -140,9 +140,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/grid-demo/tsconfig.app.json",
-              "projects/grid-demo/tsconfig.spec.json",
-              "projects/grid-demo/e2e/tsconfig.json"
+              "projects/table-demo/tsconfig.app.json",
+              "projects/table-demo/tsconfig.spec.json",
+              "projects/table-demo/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -152,16 +152,16 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/grid-demo/e2e/protractor.conf.js",
-            "devServerTarget": "grid-demo:serve"
+            "protractorConfig": "projects/table-demo/e2e/protractor.conf.js",
+            "devServerTarget": "table-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "grid-demo:serve:production"
+              "devServerTarget": "table-demo:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "grid"
+  "defaultProject": "table"
 }
